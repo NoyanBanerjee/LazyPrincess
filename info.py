@@ -65,18 +65,18 @@ REQ_CHANNEL = int(environ.get('REQ_CHANNEL', '-1002055415124'))
 #ai
 OPENAI_API = environ.get("OPENAI_API","")
 AI = is_enabled((environ.get("AI","False")), False)
-LAZY_AI_LOGS = int(environ.get("LAZY_AI_LOGS",)) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of LazyPrincess ]
+LAZY_AI_LOGS = int(environ.get("LAZY_AI_LOGS", 0)) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of LazyPrincess ]
 # Requested Content template variables ---
 ADMIN_USRNM = environ.get('ADMIN_USRNM','bot743421') # WITHOUT @
 MAIN_CHANNEL_USRNM = environ.get('MAIN_CHANNEL_USRNM','+sUpiQ5FhTz4wNGNl') # WITHOUT @
 DEV_CHANNEL_USRNM = environ.get('DEV_CHANNEL_USRNM','BotUpdates4U') # WITHOUT @
 LAZY_YT_HANDLE = environ.get('LAZY_YT_HANDLE','LayDeveloperr')  # WITHOUT @ [  add only handle - don't add full url  ] 
-MOVIE_GROUP_USERNAME = environ.get('MOVIE_GROUP_USERNAME',) #[ without @ ]
+MOVIE_GROUP_USERNAME = environ.get('MOVIE_GROUP_USERNAME', '+_prZtN2wKZU2Zjk1') #[ without @ ]
 
 # Url Shortner
 URL_MODE = is_enabled((environ.get("URL_MODE","False")), False)
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE',) #Always use website url from api section 
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API',)
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 0) #Always use website url from api section 
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 0)
 LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '5965340120').split()]
 lazy_groups = environ.get('LAZY_GROUPS',)
 LAZY_GROUPS = [int(lazy_groups) for lazy_groups in lazy_groups.split()] if lazy_groups else None # ADD GROUP ID IN THIS VARIABLE
